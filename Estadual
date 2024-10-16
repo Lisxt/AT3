@@ -1,0 +1,16 @@
+public class Estadual extends Produto{
+	
+	private double imposto = 0.10;
+	public Estadual(String Desc, double Valor) {
+	super(Desc, Valor);
+	}
+	
+    public double calcularValorFinal() {
+        return Valor + (Valor * imposto);
+    }
+	
+	@Override
+    public String toString() {
+        return super.toString() + "\nImposto Estadual: 10%" + "\nValor Final: R$ " + calcularValorFinal();
+    }
+}
