@@ -1,0 +1,37 @@
+public class Produto {
+	
+	//atributos
+	protected String Desc;
+	protected double Valor;
+	
+	
+	public Produto(String Desc, double Valor) {
+		this.Desc = Desc;
+		this.Valor = Valor;
+	}
+
+	public String getDesc() {
+		return Desc;
+	}
+	public void setDesc(String Desc) {
+		this.Desc = Desc;
+	}
+	public double getValor() {
+		return Valor;
+	}
+	public void setValor(double Valor) {
+		this.Valor = Valor;
+	}
+	
+	// Método que será sobrescrito pelas subclasses
+    public double calcularValorFinal() {
+        return Valor;
+    }
+    
+	@Override
+    public String toString() {
+        return "\nDescrição: " + Desc 
+        		+ "\nValor: " + Valor;
+    }
+	
+}
