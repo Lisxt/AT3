@@ -1,0 +1,17 @@
+public class Nacional extends Produto {
+	
+	private final double Taxa = 0.05;
+	private final double imposto = 0.10;
+	
+	public Nacional(String Desc, double Valor) {
+		super(Desc, Valor);
+	}
+	@Override
+    public double calcularValorFinal() {
+        return Valor + (Valor * imposto) + (Valor * Taxa);
+    }
+	@Override
+    public String toString() {
+        return super.toString() +"\nImposto Nacional: 10%" + "\nTaxa Nacional: 5%" + "\nValor Final: R$ " + calcularValorFinal();
+    }
+}
