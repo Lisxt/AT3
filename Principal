@@ -1,0 +1,29 @@
+public class Principal {
+
+	public static void main(String[] args) {
+		// Criando um produto estadual
+		
+		System.out.printf("\n*-------------------------------------------------------*\n");
+		
+        Estadual E = new Estadual("Produto Estadual", 100.00);
+        System.out.println("Dados do Produto Estadual:");
+        System.out.println(E);
+        
+        System.out.printf("\n*-------------------------------------------------------*\n");
+
+        // Criando um produto nacional
+        Nacional N = new Nacional("Produto Nacional", 200.00);
+        System.out.println("\nDados do Produto Nacional:");
+        System.out.println(N);
+        
+        System.out.printf("\n*-------------------------------------------------------*\n");
+
+        // Criando um produto importado
+        Importado I = new Importado("Produto Importado", 300.00);
+        System.out.println("\nDados do Produto Importado:");
+        System.out.println(I);
+        
+        System.out.printf("\n*-------------------------------------------------------*\n");
+    }
+
+}
