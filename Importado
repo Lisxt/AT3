@@ -1,0 +1,18 @@
+public class Importado extends Produto {
+
+	private final double Taxa = 0.05;
+	private final double imposto = 0.10;
+	private final  double Timportacao = 0.05;
+	
+	public Importado(String Desc, double Valor) {
+		super(Desc, Valor);
+	}
+	@Override
+	 public double calcularValorFinal() {
+	        return Valor + (Valor * imposto) + (Valor * Taxa) + (Valor * Timportacao);
+	 }
+	@Override
+    public String toString() {
+        return super.toString() +  "\nImposto Importado: 10%" + "\nTaxa Nacional: 5%" + "\nTaxa de Importação: 5%" + "\nValor Final: R$ " + calcularValorFinal();
+    }
+}
